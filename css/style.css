@@ -150,7 +150,7 @@ header {
     right:0;
     z-index: 100;
 
-    transform: translate(00%);
+    transform: translate(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -184,7 +184,7 @@ header {
     position: absolute;
     right: 1em;
     top: 1em;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .nav-open .nav{
@@ -220,7 +220,7 @@ header {
     width: 2em;
     height: 3px;
     border-radius: 1em;
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     transition: transform 250ms ease-in-out;
 }
 
