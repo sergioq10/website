@@ -35,6 +35,11 @@
 }
 
 /* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr--dark);
@@ -78,6 +83,8 @@ strong { font-weight: var(--fw-bold) };
 .btn-hover{
     transform: scale(1.1);
 }
+
+
 /* Typography */
 
 h1,
@@ -143,7 +150,7 @@ header {
     right:0;
     z-index: 100;
 
-    transform: translate(100%);
+    transform: translate(00%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -171,14 +178,35 @@ header {
 
 .nav-toggle {
     padding: .25em;
-    background: transparent;
+    background: transparent;  /**/
     border: 0;
     cursor: pointer;
     position: absolute;
     right: 1em;
     top: 1em;
-    z-index: 1000;
+    z-index: 100;
 }
+
+.nav-open .nav{
+    transform: translate(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed; 
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translate(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
 
 /* hamburger */
 .hamburger {
@@ -425,4 +453,19 @@ header {
 
 .social-list__link {
     padding: .5em 
+}
+
+
+/* Individual portfolio item style */ 
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin: auto;
+    margin-right: auto;
 }
